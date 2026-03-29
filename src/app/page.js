@@ -692,7 +692,7 @@ export default function Home() {
             <a href="#stats">Impact</a>
           </li>
         </ul>
-        <a className="btn-nav" href="https://revere-main.vercel.app/">
+        <a className="btn-nav" href="https://revere-dashboard.vercel.app/">
           Caretaker Mode
         </a>
       </nav>
@@ -711,9 +711,6 @@ export default function Home() {
           safe — without a caregiver needing to intervene at every moment.
         </p>
         <div className="hero-actions">
-          <a href="#cta" className="btn-primary">
-            Join the Waitlist
-          </a>
           <a href="#feature-1" className="btn-ghost">
             See How It Works
           </a>
@@ -1150,7 +1147,7 @@ export default function Home() {
             set daily routines, and receive real-time alerts — all from one place.
           </p>
           <div className="cta-dashboard-action reveal d3">
-            <a href="https://revere-main.vercel.app/" className="btn-3d">
+            <a href="https://revere-dashboard.vercel.app/" className="btn-3d">
               <span className="btn-3d-face">
                 Open Caretaker Mode
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
