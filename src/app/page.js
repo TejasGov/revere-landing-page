@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,6 +10,8 @@ export default function Home() {
   const scrollVideoRef = useRef(null);
   const orbitRef = useRef(null);
   const footerRef = useRef(null);
+  const demoVideoRef = useRef(null);
+  const [demoMuted, setDemoMuted] = useState(true);
   const footerCanvasRef = useRef(null);
   const footerBrandRef = useRef(null);
 
@@ -716,19 +718,14 @@ export default function Home() {
           </a>
         </div>
         <div className="hero-video">
-          <div className="vp-ring">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--accent)"
-              strokeWidth="1.5"
-            >
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-          </div>
-          <span className="vp-label">Product Overview — Video Coming Soon</span>
+          <iframe
+            src="https://www.youtube.com/embed/DchBiqB2HZE?autoplay=1&mute=1&loop=1&playlist=DchBiqB2HZE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "inherit" }}
+          ></iframe>
         </div>
       </div>
 
@@ -893,7 +890,7 @@ export default function Home() {
         <div className="feature-section feature-section--reversed">
           <div className="feat-visual">
             <div className="feat-video-bare">
-              <video autoPlay={true} muted={true} loop={true} playsInline={true} style={{ minHeight: "300px" }}>
+              <video autoPlay={true} muted={true} loop={true} playsInline={true} style={{ width: "100%", minHeight: "350px", display: "block", borderRadius: "inherit", objectFit: "cover" }}>
                 <source src="/reminder_video.mp4" type="video/mp4" />
               </video>
             </div>

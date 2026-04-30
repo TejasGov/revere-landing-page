@@ -316,6 +316,30 @@ nav.scrolled {
     position: absolute;
     inset: 0;
     background: radial-gradient(ellipse at 35% 55%, rgba(90, 158, 136, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.demo-mute-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.demo-mute-btn:hover {
+    background: rgba(0,0,0,0.55);
 }
 
 .vp-ring {
