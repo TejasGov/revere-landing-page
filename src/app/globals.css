@@ -10,7 +10,36 @@
     --accent-dim: #7bcacc;
     --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.09);
+
+    /* Glasses section */
+    --glasses-overlay-bg: #000;
+    --glasses-inner-text: #ffffff;
+    --glasses-callout-text: #ffffff;
+    --glasses-callout-muted: rgba(255, 255, 255, 0.5);
+    --glasses-callout-border: rgba(255, 255, 255, 0.25);
+    
+    --nav-scrolled-bg: rgba(250, 250, 248, 0.92);
 }
+
+[data-theme='dark'] {
+    --bg: #111110;
+    --bg-card: #1a1a19;
+    --bg-lift: #222221;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-hi: rgba(255, 255, 255, 0.2);
+    --text: #FAFAF8;
+    --muted: #A09D98;
+    
+    /* Glasses section inversion */
+    --glasses-overlay-bg: #FAFAF8;
+    --glasses-inner-text: #111110;
+    --glasses-callout-text: #111110;
+    --glasses-callout-muted: rgba(17, 17, 16, 0.6);
+    --glasses-callout-border: rgba(17, 17, 16, 0.25);
+    
+    --nav-scrolled-bg: rgba(26, 26, 25, 0.92);
+}
+
 
 *,
 *::before,
@@ -74,7 +103,7 @@ nav.scrolled {
     top: 1rem;
     max-width: 860px;
     padding: 0.6rem 1.8rem;
-    background: rgba(250, 250, 248, 0.92);
+    background: var(--nav-scrolled-bg);
     backdrop-filter: blur(18px) saturate(1.5);
     border-color: var(--border);
     border-radius: 100px;
@@ -1181,7 +1210,7 @@ nav.scrolled {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: #000;
+    background: var(--glasses-overlay-bg);
     clip-path: circle(0vw at 50% 50%);
     will-change: clip-path;
     overflow: hidden;
@@ -1236,7 +1265,7 @@ nav.scrolled {
 
 /* Inner title (inside dark overlay) always white */
 .glasses-title-wrap--inner .glasses-title-line {
-    color: #ffffff;
+    color: var(--glasses-inner-text);
 }
 
 .glasses-title-line--right {
@@ -1251,7 +1280,7 @@ nav.scrolled {
     top: 50%;
     transform: translateY(-50%);
     z-index: 4;
-    color: #fff;
+    color: var(--glasses-callout-text);
     max-width: 200px;
     opacity: 0;
     visibility: hidden;
@@ -1269,13 +1298,13 @@ nav.scrolled {
 .callout-icon {
     width: 32px;
     height: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--glasses-callout-border);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--glasses-callout-text);
 }
 
 .glasses-callout--right .callout-icon {
@@ -1284,7 +1313,7 @@ nav.scrolled {
 
 .callout-line {
     height: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--glasses-callout-border);
     margin-bottom: 0.85rem;
     transform-origin: left center;
 }
@@ -1299,12 +1328,12 @@ nav.scrolled {
     font-weight: 500;
     letter-spacing: 0.02em;
     margin-bottom: 0.35rem;
-    color: #fff;
+    color: var(--glasses-callout-text);
 }
 
 .callout-body {
     font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--glasses-callout-muted);
     line-height: 1.55;
     font-weight: 300;
 }
@@ -1320,7 +1349,7 @@ nav.scrolled {
     align-items: center;
     justify-content: space-between;
     mix-blend-mode: difference;
-    color: #fff;
+    color: #fff; /* mix-blend-mode difference keeps white dynamic */
     pointer-events: none;
 }
 

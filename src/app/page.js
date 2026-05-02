@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThemeToggle from "../components/ThemeToggle";
+import NarrationButton from "../components/NarrationButton";
 
 export default function Home() {
   const navRef = useRef(null);
@@ -697,13 +699,17 @@ export default function Home() {
         <a className="btn-nav" href="https://revere-dashboard.vercel.app/">
           Caretaker Mode
         </a>
+        <ThemeToggle />
       </nav>
 
       {/* ── Hero ── */}
       <div className="hero" ref={heroRef}>
         {/* Cloud scene — sits behind all hero content, pointer-events none */}
         <div className="hero-cloud-scene" ref={cloudSceneRef} aria-hidden="true" />
-        <div className="hero-eyebrow">AI-Powered Alzheimer's Care</div>
+        <div className="hero-eyebrow">
+          AI-Powered Alzheimer's Care
+          <NarrationButton text="Remember every face. Smart glasses that keep Alzheimer's patients oriented, connected, and safe — without a caregiver needing to intervene at every moment." />
+        </div>
         <h1 className="hero-title">
           Remember<br />
           <em>every face.</em>
@@ -851,6 +857,7 @@ export default function Home() {
             <h2 className="feat-title">
               Facial Recognition &amp;<br />
               <em>Relationship Prompting</em>
+              <NarrationButton text="Facial Recognition and Relationship Prompting. The camera identifies family members, caregivers, and friends from a pre-loaded gallery. A gentle audio cue plays through the embedded speaker before a greeting becomes a moment of distress." />
             </h2>
             <p className="feat-body">
               The camera identifies family members, caregivers, and friends from a
@@ -900,6 +907,7 @@ export default function Home() {
             <h2 className="feat-title">
               Routine Coaching &amp;<br />
               <em>Medication Reminders</em>
+              <NarrationButton text="Routine Coaching and Medication Reminders. Caregivers configure a daily schedule through the companion dashboard. Time-based audio prompts keep the patient on track privately and without interruption." />
             </h2>
             <p className="feat-body">
               Caregivers configure a daily schedule through the companion
@@ -935,6 +943,7 @@ export default function Home() {
             <h2 className="feat-title">
               Wandering Detection &amp;<br />
               <em>Location Awareness</em>
+              <NarrationButton text="Wandering Detection and Location Awareness. Passive environmental cues help Revere detect unfamiliar spaces. Caregivers receive a discreet alert while the patient receives a calming orientation prompt." />
             </h2>
             <p className="feat-body">
               Passive environmental cues help Revere detect unfamiliar spaces.
@@ -1027,6 +1036,7 @@ export default function Home() {
             <h2 className="feat-title">
               Configure once.<br />
               <em>Run quietly.</em>
+              <NarrationButton text="Configure once. Run quietly. A simple web dashboard lets families and caregivers upload face galleries, schedule daily routines, and review device activity." />
             </h2>
             <p className="feat-body">
               A simple web dashboard lets families and caregivers upload face
@@ -1138,6 +1148,7 @@ export default function Home() {
           <h2 className="cta-title reveal d1">
             You care for them.<br />
             <em>We care for you.</em>
+            <NarrationButton text="You care for them. We care for you. The Revere caretaker dashboard lets you manage face galleries, set daily routines, and receive real-time alerts — all from one place." />
           </h2>
           <p className="cta-sub reveal d2">
             The Revere caretaker dashboard lets you manage face galleries,
