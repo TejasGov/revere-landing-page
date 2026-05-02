@@ -725,7 +725,7 @@ export default function Home() {
         </div>
         <div className="hero-video">
           <iframe
-            src="https://www.youtube.com/embed/DchBiqB2HZE?autoplay=1&mute=1&loop=1&playlist=DchBiqB2HZE"
+            src="https://www.youtube.com/embed/hZ8QM_smyUw?autoplay=1&mute=1&loop=1&playlist=hZ8QM_smyUw"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
